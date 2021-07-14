@@ -214,6 +214,11 @@ hr{
         margin-bottom: 20px;
     }
 
+    .header-img img{
+        width: 70%;
+        margin-left: 20px;
+    }
+
     .players{
         grid-template-columns: repeat(1,1fr);
     }
