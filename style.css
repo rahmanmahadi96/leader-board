@@ -1,13 +1,33 @@
+/* google fonts */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
+
+
+/* common section */
 body{
     font-family: 'Poppins', sans-serif;
 }
+
+.container{
+    width: 810px;
+    margin: 73px;
+}
+
+
+
+
+/* header body part starts here */
 
 header{
     background-color: rgb(16, 16, 104);
     min-width: 100%;
 }
+
+
+/* nav container section */
+
+
 nav{
     display: flex;
     justify-content: space-between;
@@ -16,7 +36,6 @@ nav{
 ul li {
     display: inline-block; 
 }
-
 
 ul li a{
     text-decoration: none;
@@ -27,6 +46,7 @@ ul li a{
     font-size: 1.2em;
 
 }
+
 ul li a:hover{
     background-color: rgb(253, 245, 245);
     color: darkmagenta;
@@ -37,10 +57,6 @@ ul li a:hover{
     margin: 15px;
 }
 
-.fas{
-    margin: 0px 6px;
-}
-
 .log-in a{
     font-size: 1.2em;
     background-color: darkmagenta;
@@ -49,11 +65,20 @@ ul li a:hover{
     padding: 5px;
 }
 
+.fas{
+    margin: 0px 6px;
+}
+
+
+
+/* header container section */
+
+
+
 .header-container{
     display: flex;
     align-items: center;
     padding: 15px;
-    margin-bottom: 50px;
 }
 
 .header-info{
@@ -76,15 +101,22 @@ ul li a:hover{
 
 
  .header-img img{
-     max-width: 454px;
-     max-height: 357px;
+     max-width: 400px;
+     max-height: 315px;
  }
 
  .header-container:hover .header-img{
      transform: scale(0.75);
      transition: transform 2s;
  }
+
+ /* header body part ends here */
+
+
+ /* main body part starts here */
  
+
+ /* main */
 main{
     display: flex;
     justify-content: center;
@@ -92,20 +124,21 @@ main{
     flex-direction: column;
 }
 
-.container{
-    width: 830px;
-    margin-bottom: 70px;
-}
+
+
+/* player section  */
+
+
 
 .players{
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    grid-column-gap: 18px;
+    grid-column-gap: 22px;
     grid-row-gap: 20px;
 }
 
 .player{
-    width: 260px;
+    width: 238px;
     padding: 10px;
     box-sizing: border-box;
     border-radius: 3px;
@@ -125,24 +158,36 @@ main{
 
 
 .player img{
-    width: 240px;
-    height: 176px;
+    width: 216px;
+    height: 185px;
 }
 
-.highlights{
+
+/* best player section  */
+
+
+.bestplayer{
     display: flex;
 }
 
 .highlights-image img{
-    width: 435px;
-    height: 318px;
+    width: 410px;
+    height: 308px;
 }
+
+
+/* video highlights section  */
+
 
 .video-highlights{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
+
+/* stats section  */
+
 
 .score-container{
     display: flex;
@@ -185,6 +230,11 @@ hr{
 }
 
 
+/* main body ends here  */
+
+
+/* footer container starts here  */
+
 .footerpart{
     display: flex;
     flex-direction: column;
@@ -192,9 +242,16 @@ hr{
 }
 
 .footerpart img{
-    max-width: 363px;
-    max-height: 110px;
+    max-width: 348px;
+    max-height: 80px;
 }
+
+/* footer container starts here  */
+
+
+/* -----device below 688px ---------*/
+
+/* ----media query---- */
 
 
 @media only screen and (max-width: 688px){
@@ -217,15 +274,17 @@ hr{
     .header-img img{
         width: 70%;
         margin-left: 20px;
+        text-align: center;
+    }
+
+    .container{
+        width: 100%;  
     }
 
     .players{
         grid-template-columns: repeat(1,1fr);
     }
-    .container{
-        width: 100%;
-        
-    }
+    
     .player{
         display: flex;
         flex-direction: column;
@@ -236,7 +295,7 @@ hr{
 
     
 
-    .highlights{
+    .bestplayer{
         display: flex;
         flex-direction: column;
     }
@@ -244,26 +303,34 @@ hr{
     .highlights-title{
         margin-bottom: 10px;
     }
-
 }
+
+
+/* -----device below 689px and 991px ---------*/
+
+/* ----media query---- */
 
 @media only screen and (min-width:689px) and (max-width: 991px){
 
-
-    .players{
-        grid-template-columns: repeat(2,1fr);
-    }
-    .container{
-        width: 100%;
-    }
 
     .header-container{
         display: flex;
         flex-direction: column;
     }
+
     .header-info{
         margin-bottom: 20px;
     }
+
+    .container{
+        width: 100%;
+    }
+
+    .players{
+        grid-template-columns: repeat(2,1fr);
+    }
+    
+
     .player{
         display: flex;
         flex-direction: column;
